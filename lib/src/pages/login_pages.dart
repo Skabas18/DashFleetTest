@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:prueba_app/src/pages/menu_pages.dart';
 
+import '../widgets/switch.dart';
 import '../widgets/textappbar.dart';
 import '../widgets/textfield.dart';
 
@@ -45,15 +46,19 @@ class LoginPage extends StatelessWidget {
             hintText: '********',
             obscureText: true,
           ),
+          const SwitchButton(),
           Padding(
             padding: const EdgeInsets.only(top: 64),
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: Colors.black, width: 2),
                   color: Colors.white),
-              width: size.width * 0.8,
+              width: size.width * 0.5,
               child: TextButton(
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      textStyle: const TextStyle(fontSize: 20)),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => const MenuPage()));
@@ -62,12 +67,12 @@ class LoginPage extends StatelessWidget {
                     "Entrar",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontFamily: "RSV", fontSize: 30, color: Colors.black),
+                        fontFamily: "RSV", fontSize: 30, color: Colors.white),
                   )),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 2),
+            padding: const EdgeInsets.only(top: 20),
             // ignore: sized_box_for_whitespace
             child: Container(
               width: size.width * 0.8,
