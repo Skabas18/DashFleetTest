@@ -8,9 +8,10 @@ class SwitchButton extends StatefulWidget {
 }
 
 class _SwitchButtonState extends State<SwitchButton> {
+  bool light = true;
+
   @override
   Widget build(BuildContext context) {
-    bool light = true;
     return Switch(
       // This bool value toggles the switch.
       value: light,
